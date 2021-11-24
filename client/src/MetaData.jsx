@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import axios from 'axios';
+// import axios from 'axios';
 import React, { Fragment, cloneElement } from 'react';
 
 const MetaData = ({ children }) => {
@@ -9,8 +9,8 @@ const MetaData = ({ children }) => {
       widget: module,
       time: new Date(),
     };
-    axios.post('/interactions', click)
-      .catch((err) => console.error(err));
+    // axios.post('/interactions', click)
+    //   .catch((err) => console.error(err));
   };
 
   return (

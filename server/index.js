@@ -2,9 +2,10 @@ const path = require('path');
 const express = require('express');
 const compression = require('compression');
 const axios = require('axios');
-const { API_TOKEN, CAMPUS } = require('../config.js');
+// const { API_TOKEN, CAMPUS } = require('../config.js');
 
-const apiURL = `https://app-hrsei-api.herokuapp.com/api/fec2/${CAMPUS}/`;
+// const apiURL = `https://app-hrsei-api.herokuapp.com/api/fec2/${CAMPUS}/`;
+const sdcURL = 'http://localhost:3000';
 
 const app = express();
 
@@ -17,11 +18,11 @@ app.use((req, res) => {
   axios({
     method: req.method,
     url: req.url,
-    baseURL: apiURL,
+    baseURL: sdcURL,
     data: req.body,
-    headers: {
-      Authorization: API_TOKEN,
-    },
+    // headers: {
+    //   Authorization: API_TOKEN,
+    // },
   })
     .then((response) => {
       res.status(response.status).send(response.data);
@@ -31,4 +32,4 @@ app.use((req, res) => {
     });
 });
 
-app.listen(3000, console.log('Connected to the island'));
+app.listen(3100, console.log('Connected to the island'));
