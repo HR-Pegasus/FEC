@@ -5,7 +5,7 @@ const axios = require('axios');
 // const { API_TOKEN, CAMPUS } = require('../config.js');
 
 // const apiURL = `https://app-hrsei-api.herokuapp.com/api/fec2/${CAMPUS}/`;
-const sdcURL = 'http://localhost:3000';
+const sdcURL = 'http://13.59.142.234:3000';
 
 const app = express();
 
@@ -32,4 +32,4 @@ app.use((req, res) => {
     });
 });
 
-app.listen(3100, console.log('Connected to the island'));
+app.listen(3000, console.log('Connected to the island'));
