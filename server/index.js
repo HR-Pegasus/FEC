@@ -6,6 +6,7 @@ const axios = require('axios');
 
 // const apiURL = `https://app-hrsei-api.herokuapp.com/api/fec2/${CAMPUS}/`;
 const sdcURL = 'http://13.59.142.234:3000';
+const localURL = 'http://localhost:1234';
 
 const app = express();
 
